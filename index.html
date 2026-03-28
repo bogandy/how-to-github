@@ -1,26 +1,643 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050a14">
+  <meta name="description" content="Firefly offers intimate six-passenger orbital journeys around Earth — 3 days in orbit, 16 sunrises a day, 400 km up.">
+  <title>Firefly — Orbital Experiences</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
-<!-- This is where the content of the page goes -->
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;title&gt;My GitHub Page&lt;/title&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body style=”font-family: sans-serif; text-align: center; padding: 100px; background: #0a0a0a; color: white;”&gt;</p>
-<p class="p1">&lt;h1&gt;🚀 Hello from GitHub Pages!&lt;/h1&gt;</p>
-<p class="p1">&lt;p&gt;This page is hosted for free, straight from a GitHub repository.&lt;/p&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+  <!-- ── Navigation ── -->
+  <header class="site-header">
+    <a href="#" class="nav-logo">FIRE<span>FLY</span></a>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">Mission</a></li>
+        <li><a href="#trip">The Trip</a></li>
+        <li><a href="#acceptance">Acceptance</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#apply" class="nav-cta">Apply Now</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ── Hero ── -->
+    <section id="hero" aria-label="Hero">
+      <div class="container">
+        <div class="hero-inner">
+
+          <div class="hero-content reveal">
+            <p class="hero-badge">&#9679; Now accepting applications for 2027</p>
+            <h1>Your orbit<br>around <em>Earth</em><br>awaits.</h1>
+            <p class="hero-desc">
+              Firefly offers intimate, six-passenger orbital journeys — 90 minutes per orbit,
+              16 sunrises per day, and a view of our planet that changes everything.
+            </p>
+            <div class="hero-actions">
+              <a href="#apply" class="btn-primary">Apply for a Seat</a>
+              <a href="#trip"  class="btn-ghost">Learn More</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat">
+                <p class="stat-number">6<span> seats</span></p>
+                <p class="stat-label">per mission</p>
+              </div>
+              <div class="stat">
+                <p class="stat-number">3<span> days</span></p>
+                <p class="stat-label">in orbit</p>
+              </div>
+              <div class="stat">
+                <p class="stat-number">400<span> km</span></p>
+                <p class="stat-label">altitude</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="orbit-ring r1"></div>
+            <div class="orbit-ring r2"></div>
+            <div class="earth"></div>
+            <div class="shuttle">&#128640;</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── About / Mission ── -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="reveal">
+            <p class="section-label">Our Mission</p>
+            <h2 id="about-title" class="section-title">Space, made personal.</h2>
+            <p class="section-sub">
+              Firefly was founded on a simple belief: that the overview effect — seeing Earth whole
+              from space — should be available to more than a handful of government astronauts.
+              We built a spacecraft, a training program, and a company around making that possible safely.
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li class="reveal">
+              <div class="feature-icon" aria-hidden="true">&#127758;</div>
+              <div class="feature-text">
+                <strong>True orbital flight</strong>
+                <span>Not a suborbital hop. You reach orbital velocity and circle Earth every 90 minutes.</span>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="feature-icon" aria-hidden="true">&#128101;</div>
+              <div class="feature-text">
+                <strong>Maximum 6 passengers</strong>
+                <span>Small groups mean individual attention, a quieter cabin, and real camaraderie in orbit.</span>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="feature-icon" aria-hidden="true">&#128274;</div>
+              <div class="feature-text">
+                <strong>Safety first</strong>
+                <span>A rigorous medical screening and training program ensures every passenger is mission-ready.</span>
+              </div>
+            </li>
+            <li class="reveal">
+              <div class="feature-icon" aria-hidden="true">&#127775;</div>
+              <div class="feature-text">
+                <strong>72 hours of wonder</strong>
+                <span>Three full days in orbit — time to sleep, adapt, observe, and reflect on everything below.</span>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Trip Details ── -->
+    <section id="trip" aria-labelledby="trip-title">
+      <div class="container">
+
+        <header class="section-header--center reveal">
+          <p class="section-label">The Journey</p>
+          <h2 id="trip-title">From launchpad to splashdown.</h2>
+          <p class="section-sub">
+            A Firefly mission spans five days in total — two days of pre-launch preparation,
+            three days in orbit, and a supervised recovery period on return.
+          </p>
+        </header>
+
+        <ol class="timeline" aria-label="Mission timeline">
+          <li class="timeline-step reveal">
+            <div class="step-dot" aria-hidden="true">&#128196;</div>
+            <p class="step-time">T&#8722;48h</p>
+            <p class="step-title">Pre-Launch</p>
+            <p class="step-desc">Medical check, suit fitting, emergency drills &amp; crew briefings at our Florida facility.</p>
+          </li>
+          <li class="timeline-step reveal">
+            <div class="step-dot" aria-hidden="true">&#128640;</div>
+            <p class="step-time">T+0</p>
+            <p class="step-title">Launch</p>
+            <p class="step-desc">Liftoff from Cape Canaveral. Orbital insertion at 400 km within 10 minutes of launch.</p>
+          </li>
+          <li class="timeline-step reveal">
+            <div class="step-dot" aria-hidden="true">&#127759;</div>
+            <p class="step-time">Days 1&#8211;3</p>
+            <p class="step-title">Orbit</p>
+            <p class="step-desc">48 complete orbits. 16 sunrises a day. Cupola observation time scheduled for every passenger.</p>
+          </li>
+          <li class="timeline-step reveal">
+            <div class="step-dot" aria-hidden="true">&#127754;</div>
+            <p class="step-time">Day 4</p>
+            <p class="step-title">Return</p>
+            <p class="step-desc">Deorbit burn, atmospheric re-entry, and water splashdown. Medical team on-site.</p>
+          </li>
+        </ol>
+
+        <div class="shuttle-card reveal">
+          <div class="shuttle-visual" aria-hidden="true">&#128640;</div>
+
+          <div class="shuttle-info">
+            <h3>Firefly Capsule &#8212; &#8220;Aurora&#8221;</h3>
+            <p>
+              Aurora is a fully autonomous pressurised capsule built for civilian orbital flight.
+              She carries 6 passengers plus 1 Firefly flight director, with a pressurised volume of
+              11&nbsp;m&#179;, redundant life support, and a full-panoramic cupola dome.
+            </p>
+            <p class="shuttle-specs">
+              &#128274; All systems triple-redundant &nbsp;&#183;&nbsp;
+              &#127749; 21% O&#8322; atmosphere &nbsp;&#183;&nbsp;
+              &#10052;&#65039; 20&#176;C cabin temp
+            </p>
+          </div>
+
+          <div>
+            <ul class="seats-grid" aria-label="6 passenger seats">
+              <li class="seat" aria-label="Seat 1">&#128100;</li>
+              <li class="seat" aria-label="Seat 2">&#128100;</li>
+              <li class="seat" aria-label="Seat 3">&#128100;</li>
+              <li class="seat" aria-label="Seat 4">&#128100;</li>
+              <li class="seat" aria-label="Seat 5">&#128100;</li>
+              <li class="seat" aria-label="Seat 6">&#128100;</li>
+            </ul>
+            <p class="seats-label">6 passenger seats available per mission</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Acceptance Program ── -->
+    <section id="acceptance" aria-labelledby="acceptance-title">
+      <div class="container">
+
+        <header class="section-header--center reveal">
+          <p class="section-label">Acceptance Program</p>
+          <h2 id="acceptance-title">Is spaceflight right for you?</h2>
+          <p class="section-sub">
+            We care deeply about your safety. Everyone who flies with Firefly completes
+            a structured medical evaluation and a short astronaut-readiness program before launch.
+          </p>
+        </header>
+
+        <ul class="requirements-grid">
+
+          <li class="req-card reveal">
+            <p class="req-icon" aria-hidden="true">&#129657;</p>
+            <h3>Cardiovascular Health</h3>
+            <p>Launch and re-entry expose the body to 3&#8211;4 g-forces. Your heart and circulatory system must be robust enough to handle this safely.</p>
+            <ul>
+              <li>Resting ECG &amp; stress ECG</li>
+              <li>Echocardiogram</li>
+              <li>Blood pressure within normal range (no uncontrolled hypertension)</li>
+              <li>No recent cardiac events</li>
+            </ul>
+          </li>
+
+          <li class="req-card reveal">
+            <p class="req-icon" aria-hidden="true">&#129504;</p>
+            <h3>Neurological Screening</h3>
+            <p>Microgravity affects vestibular function and spatial perception. We screen for any conditions that could be exacerbated in orbit.</p>
+            <ul>
+              <li>Neurological history review</li>
+              <li>No uncontrolled epilepsy or severe motion-sickness disorder</li>
+              <li>Baseline cognitive assessment</li>
+            </ul>
+          </li>
+
+          <li class="req-card reveal">
+            <p class="req-icon" aria-hidden="true">&#129518;</p>
+            <h3>Pulmonary &amp; General Fitness</h3>
+            <p>A healthy respiratory system and reasonable general fitness are necessary for suit operations and rapid cabin depressurisation drills.</p>
+            <ul>
+              <li>Spirometry / lung function test</li>
+              <li>No active severe respiratory disease</li>
+              <li>Body mass index within mission parameters</li>
+              <li>Blood panel (CBC, metabolic)</li>
+            </ul>
+          </li>
+
+          <li class="req-card reveal">
+            <p class="req-icon" aria-hidden="true">&#128170;</p>
+            <h3>Physical Readiness Tests</h3>
+            <p>Candidates complete a short fitness assessment. You do not need to be an athlete &#8212; these are minimum-safety benchmarks.</p>
+            <ul>
+              <li>3-minute step test (cardiovascular endurance)</li>
+              <li>Grip-strength measurement</li>
+              <li>Seated forward bend (flexibility)</li>
+              <li>Simulated g-force chair (centrifuge) tolerance test</li>
+            </ul>
+          </li>
+
+          <li class="req-card reveal">
+            <p class="req-icon" aria-hidden="true">&#128373;&#65039;</p>
+            <h3>Suited Emergency Drills</h3>
+            <p>All passengers must demonstrate the ability to don and verify their pressure suit, perform cabin egress, and operate emergency O&#8322; independently.</p>
+            <ul>
+              <li>Suit-donning time trial (8 min max)</li>
+              <li>Emergency egress simulation</li>
+              <li>Microgravity orientation exercise (neutral-buoyancy pool)</li>
+            </ul>
+          </li>
+
+          <li class="req-card reveal">
+            <p class="req-icon" aria-hidden="true">&#128203;</p>
+            <h3>Psychological Assessment</h3>
+            <p>Confined spaces and the intensity of orbital flight demand emotional resilience. We offer this evaluation as a mutual safeguard, not a barrier.</p>
+            <ul>
+              <li>Structured clinical interview</li>
+              <li>Claustrophobia &amp; isolation tolerance screen</li>
+              <li>Pre-flight psychology debrief</li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <div class="process-strip reveal">
+          <strong>Evaluation timeline</strong>
+          <ol class="process-steps">
+            <li class="p-step" data-n="1">Application submitted</li>
+            <li class="p-step" data-n="2">Medical records review (4 weeks)</li>
+            <li class="p-step" data-n="3">On-site health screening (2 days)</li>
+            <li class="p-step" data-n="4">Fitness &amp; drills assessment (1 day)</li>
+            <li class="p-step" data-n="5">Psychological debrief (1 day)</li>
+            <li class="p-step" data-n="6">Final clearance &amp; seat assignment</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Testimonials ── -->
+    <section id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+
+        <header class="section-header--center reveal">
+          <p class="section-label">Testimonials</p>
+          <h2 id="testimonials-title">From those who&#8217;ve been there.</h2>
+          <p class="section-sub">
+            Every Firefly mission carries six ordinary people. Here is what some of them say after coming home.
+          </p>
+        </header>
+
+        <ul class="testimonials-grid">
+
+          <li class="test-card reveal">
+            <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <blockquote class="test-quote">
+              &#8220;Nothing in 42 years of life prepared me for that first glimpse of the horizon
+              curving away. No photograph captures the colour of the atmosphere from the other side.
+              I cried. Twice. Zero regrets.&#8221;
+            </blockquote>
+            <footer class="test-author">
+              <div class="author-avatar avatar-orange" aria-hidden="true">SR</div>
+              <div>
+                <p class="author-name">Sofia Reyes</p>
+                <p class="author-meta">Mission 03 &#8212; Architect, Barcelona</p>
+              </div>
+            </footer>
+          </li>
+
+          <li class="test-card reveal">
+            <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <blockquote class="test-quote">
+              &#8220;I was nervous about the medical screening &#8212; I had a stent placed six years ago.
+              The Firefly medical team worked with my cardiologist over three months and cleared me.
+              Their thoroughness is exactly what gave me confidence to go.&#8221;
+            </blockquote>
+            <footer class="test-author">
+              <div class="author-avatar avatar-blue" aria-hidden="true">DK</div>
+              <div>
+                <p class="author-name">David Kim</p>
+                <p class="author-meta">Mission 05 &#8212; Retired engineer, Seoul</p>
+              </div>
+            </footer>
+          </li>
+
+          <li class="test-card reveal">
+            <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <blockquote class="test-quote">
+              &#8220;The six of us became friends in a way that only happens when you have been
+              weightless together, watched a sunrise over the Indian Ocean, and eaten freeze-dried
+              risotto out of a pouch. We still video-call every month.&#8221;
+            </blockquote>
+            <footer class="test-author">
+              <div class="author-avatar avatar-purple" aria-hidden="true">AL</div>
+              <div>
+                <p class="author-name">Amara Leclerc</p>
+                <p class="author-meta">Mission 07 &#8212; Journalist, Paris</p>
+              </div>
+            </footer>
+          </li>
+
+          <li class="test-card reveal">
+            <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <blockquote class="test-quote">
+              &#8220;The re-entry was intense &#8212; you feel every g. But the training is so thorough
+              that when the g-force hit I knew exactly what to expect. Best prepared I have ever
+              been for anything in my life.&#8221;
+            </blockquote>
+            <footer class="test-author">
+              <div class="author-avatar avatar-green" aria-hidden="true">MP</div>
+              <div>
+                <p class="author-name">Marco Pellegrini</p>
+                <p class="author-meta">Mission 04 &#8212; Surgeon, Milan</p>
+              </div>
+            </footer>
+          </li>
+
+          <li class="test-card reveal">
+            <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <blockquote class="test-quote">
+              &#8220;I spent the first 24 hours just staring out of the cupola. My husband said I went
+              quiet in a way he had never seen before. I came back different &#8212; calmer, more
+              grateful, impossible to stress over small things.&#8221;
+            </blockquote>
+            <footer class="test-author">
+              <div class="author-avatar avatar-amber" aria-hidden="true">YN</div>
+              <div>
+                <p class="author-name">Yuki Nakamura</p>
+                <p class="author-meta">Mission 06 &#8212; Product designer, Tokyo</p>
+              </div>
+            </footer>
+          </li>
+
+          <li class="test-card reveal">
+            <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <blockquote class="test-quote">
+              &#8220;I applied thinking the acceptance process would be a barrier. Instead it became
+              part of the journey &#8212; the centrifuge session, the underwater drill, the
+              psychology session. By launch day I felt like I belonged there.&#8221;
+            </blockquote>
+            <footer class="test-author">
+              <div class="author-avatar avatar-pink" aria-hidden="true">TW</div>
+              <div>
+                <p class="author-name">Tomas Wi&#347;niewski</p>
+                <p class="author-meta">Mission 08 &#8212; Teacher, Warsaw</p>
+              </div>
+            </footer>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── Application Form ── -->
+    <section id="apply" aria-labelledby="apply-title">
+      <div class="container">
+
+        <header class="section-header--center reveal">
+          <p class="section-label">Apply</p>
+          <h2 id="apply-title">Start your application.</h2>
+          <p class="section-sub">
+            Tell us about yourself and your health. Our team reviews every application personally
+            and will contact you within 10 business days.
+          </p>
+        </header>
+
+        <form class="apply-form reveal" action="#" method="post" novalidate>
+
+          <!-- Personal Information -->
+          <p class="form-section-title">Personal Information</p>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first_name" placeholder="Elena" autocomplete="given-name" required>
+            </div>
+            <div class="form-field">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last_name" placeholder="Vasquez" autocomplete="family-name" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="elena@example.com" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 555 000 0000" autocomplete="tel">
+            </div>
+            <div class="form-field">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="dob" autocomplete="bday" required>
+            </div>
+            <div class="form-field">
+              <label for="nationality">Nationality</label>
+              <input type="text" id="nationality" name="nationality" placeholder="e.g. Spanish">
+            </div>
+            <div class="form-field">
+              <label for="occupation">Occupation</label>
+              <input type="text" id="occupation" name="occupation" placeholder="e.g. Software Engineer">
+            </div>
+            <div class="form-field">
+              <label for="mission-year">Preferred Mission Year</label>
+              <select id="mission-year" name="mission_year">
+                <option value="">&#8212; Select &#8212;</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-divider"></div>
+
+          <!-- Health Information -->
+          <p class="form-section-title">Health &amp; Medical Information</p>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="height">Height (cm)</label>
+              <input type="number" id="height" name="height" placeholder="170" min="140" max="210">
+            </div>
+            <div class="form-field">
+              <label for="weight">Weight (kg)</label>
+              <input type="number" id="weight" name="weight" placeholder="70" min="40" max="150">
+            </div>
+            <div class="form-field">
+              <label for="blood-type">Blood Type</label>
+              <select id="blood-type" name="blood_type">
+                <option value="">&#8212; Select &#8212;</option>
+                <option>A+</option><option>A&#8722;</option>
+                <option>B+</option><option>B&#8722;</option>
+                <option>AB+</option><option>AB&#8722;</option>
+                <option>O+</option><option>O&#8722;</option>
+                <option value="unknown">Unknown</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="fitness">General Fitness Level</label>
+              <select id="fitness" name="fitness_level">
+                <option value="">&#8212; Select &#8212;</option>
+                <option value="sedentary">Sedentary (desk job, minimal exercise)</option>
+                <option value="light">Lightly active (walks, occasional gym)</option>
+                <option value="moderate">Moderately active (gym 3&#215;/week)</option>
+                <option value="active">Very active (athlete or strenuous work)</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label for="conditions">Pre-existing Medical Conditions</label>
+              <textarea id="conditions" name="conditions" placeholder="List any diagnosed conditions, past surgeries, or ongoing treatments. If none, write &#8216;None&#8217;."></textarea>
+            </div>
+            <div class="form-field full">
+              <label for="medications">Current Medications</label>
+              <textarea id="medications" name="medications" style="min-height:80px" placeholder="List name, dosage, and frequency of any regular medications. If none, write &#8216;None&#8217;."></textarea>
+            </div>
+            <div class="form-field full">
+              <label for="allergies">Known Allergies</label>
+              <input type="text" id="allergies" name="allergies" placeholder="e.g. Penicillin, latex, shellfish &#8212; or &#8216;None&#8217;">
+            </div>
+          </div>
+
+          <div class="form-divider"></div>
+
+          <!-- Safety Questionnaire -->
+          <p class="form-section-title">Safety Questionnaire</p>
+          <div class="form-grid">
+            <div class="form-field full">
+              <label for="cardiac">Have you ever been diagnosed with a heart condition or had a cardiac event?</label>
+              <select id="cardiac" name="cardiac_history" required>
+                <option value="">&#8212; Select &#8212;</option>
+                <option value="no">No</option>
+                <option value="yes_resolved">Yes &#8212; resolved / treated successfully</option>
+                <option value="yes_ongoing">Yes &#8212; ongoing condition</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label for="motion">Do you experience significant motion sickness?</label>
+              <select id="motion" name="motion_sickness" required>
+                <option value="">&#8212; Select &#8212;</option>
+                <option value="no">No</option>
+                <option value="mild">Mild (cars or boats occasionally)</option>
+                <option value="moderate">Moderate (requires medication)</option>
+                <option value="severe">Severe</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label for="claustrophobia">Have you experienced claustrophobia in confined spaces?</label>
+              <select id="claustrophobia" name="claustrophobia" required>
+                <option value="">&#8212; Select &#8212;</option>
+                <option value="no">No</option>
+                <option value="mild">Mild discomfort</option>
+                <option value="yes">Yes &#8212; diagnosed or significant</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label for="motivation">Why do you want to fly with Firefly? <span aria-label="optional">(optional)</span></label>
+              <textarea id="motivation" name="motivation" placeholder="Tell us in a few sentences what draws you to orbital flight&#8230;"></textarea>
+            </div>
+          </div>
+
+          <div class="form-divider"></div>
+
+          <!-- Consent -->
+          <p class="form-section-title">Consent &amp; Declarations</p>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="consent-medical" name="consent_medical" required>
+            <label for="consent-medical">
+              I authorise Firefly Space Inc. to contact my GP and any relevant specialists to verify
+              the health information provided in this application.
+            </label>
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="consent-accurate" name="consent_accurate" required>
+            <label for="consent-accurate">
+              I declare that all information submitted in this form is accurate and complete to the
+              best of my knowledge. I understand that misrepresentation may result in disqualification.
+            </label>
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="consent-risk" name="consent_risk" required>
+            <label for="consent-risk">
+              I acknowledge that spaceflight carries inherent risks and that final medical clearance
+              is required before a seat is confirmed.
+            </label>
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="consent-privacy" name="consent_privacy" required>
+            <label for="consent-privacy">
+              I have read and accept the <a href="#" style="color:var(--accent)">Privacy Policy</a>
+              governing how Firefly processes my personal and health data.
+            </label>
+          </div>
+
+          <div class="submit-row">
+            <button type="submit" class="btn-submit">Submit Application</button>
+            <p class="submit-note">
+              We review every application personally.<br>
+              You will hear from us within 10 business days.
+            </p>
+          </div>
+
+        </form>
+
+        <!-- Shown by JS after successful submit -->
+        <div class="form-success apply-form" role="status" aria-live="polite">
+          <p class="success-icon" aria-hidden="true">&#9989;</p>
+          <h3>Application received!</h3>
+          <p>Thank you for applying to Firefly. Our team will review your details and be in touch within 10 business days.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <p class="footer-logo">FIRE<span>FLY</span></p>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="#about">Mission</a>
+      <a href="#trip">The Trip</a>
+      <a href="#acceptance">Acceptance</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#apply">Apply</a>
+    </nav>
+    <address>
+      <p>Firefly Space Inc. &nbsp;&#183;&nbsp; Cape Canaveral, FL &nbsp;&#183;&nbsp;
+        <a href="mailto:hello@firefly.space">hello@firefly.space</a>
+      </p>
+    </address>
+    <p style="margin-block-start:.5rem">&#169; 2027 Firefly Space Inc. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
