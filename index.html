@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#050a14">
+  <meta name="theme-color" content="#061418">
   <meta name="description" content="Firefly offers intimate six-passenger orbital journeys around Earth — 3 days in orbit, 16 sunrises a day, 400 km up.">
   <title>Firefly — Orbital Experiences</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -48,7 +48,7 @@
         <div class="hero-inner">
 
           <div class="hero-content reveal">
-            <p class="hero-badge">&#9679; Now accepting applications for 2027</p>
+            <p class="hero-badge">Now accepting applications for 2027</p>
             <h1>Your orbit<br>around <em>Earth</em><br>awaits.</h1>
             <p class="hero-desc">
               Firefly offers intimate, six-passenger orbital journeys — 90 minutes per orbit,
@@ -148,62 +148,69 @@
           </p>
         </header>
 
-        <ol class="timeline" aria-label="Mission timeline">
-          <li class="timeline-step reveal">
-            <div class="step-dot" aria-hidden="true">&#128196;</div>
-            <p class="step-time">T&#8722;48h</p>
-            <p class="step-title">Pre-Launch</p>
-            <p class="step-desc">Medical check, suit fitting, emergency drills &amp; crew briefings at our Florida facility.</p>
+        <ol class="trip-steps" aria-label="Mission timeline">
+
+          <!-- 1 — Pre-Launch: text left, image right -->
+          <li class="trip-step reveal">
+            <div class="trip-step-content">
+              <p class="step-time">T&#8722;48h</p>
+              <h3 class="step-title">Pre-Launch</h3>
+              <p class="step-desc">Two days before liftoff, your mission begins at our Cape Canaveral facility. You will undergo a final medical check, pressure-suit fitting, emergency egress drills, and full crew briefings with your Firefly flight director. It is the moment a journey of months becomes very, very real.</p>
+            </div>
+            <div class="trip-step-image" aria-hidden="true">
+              <div class="trip-step-visual trip-visual--prelaunch">
+                <span class="trip-visual-icon">&#128196;</span>
+                <div class="trip-visual-label">T&#8722;48h · Cape Canaveral, FL</div>
+              </div>
+            </div>
           </li>
-          <li class="timeline-step reveal">
-            <div class="step-dot" aria-hidden="true">&#128640;</div>
-            <p class="step-time">T+0</p>
-            <p class="step-title">Launch</p>
-            <p class="step-desc">Liftoff from Cape Canaveral. Orbital insertion at 400 km within 10 minutes of launch.</p>
+
+          <!-- 2 — Launch: image left, text right -->
+          <li class="trip-step trip-step--flip reveal">
+            <div class="trip-step-image" aria-hidden="true">
+              <div class="trip-step-visual trip-visual--launch">
+                <span class="trip-visual-icon">&#128640;</span>
+                <div class="trip-visual-label">T+0 · Orbital insertion in 10 min</div>
+              </div>
+            </div>
+            <div class="trip-step-content">
+              <p class="step-time">T+0</p>
+              <h3 class="step-title">Launch</h3>
+              <p class="step-desc">Engines ignite. Liftoff from Launch Complex 39 presses you back into your seat at 3&nbsp;g. The sky darkens from blue to violet to absolute black in under three minutes. Ten minutes after leaving the pad, Aurora reaches orbital velocity at 400&nbsp;km altitude — and the weightlessness begins.</p>
+            </div>
           </li>
-          <li class="timeline-step reveal">
-            <div class="step-dot" aria-hidden="true">&#127759;</div>
-            <p class="step-time">Days 1&#8211;3</p>
-            <p class="step-title">Orbit</p>
-            <p class="step-desc">48 complete orbits. 16 sunrises a day. Cupola observation time scheduled for every passenger.</p>
+
+          <!-- 3 — Orbit: text left, image right -->
+          <li class="trip-step reveal">
+            <div class="trip-step-content">
+              <p class="step-time">Days 1&#8211;3</p>
+              <h3 class="step-title">In Orbit</h3>
+              <p class="step-desc">Forty-eight complete orbits. Sixteen sunrises every day. Each passenger receives dedicated cupola observation time, and the rest of the cabin is yours to float through freely. Sleep cycles follow Earth's light rhythm. Meals are prepared in the galley module. Time passes differently up here — slower and faster at once.</p>
+            </div>
+            <div class="trip-step-image" aria-hidden="true">
+              <div class="trip-step-visual trip-visual--orbit">
+                <span class="trip-visual-icon">&#127759;</span>
+                <div class="trip-visual-label">400 km altitude · 28,000 km/h</div>
+              </div>
+            </div>
           </li>
-          <li class="timeline-step reveal">
-            <div class="step-dot" aria-hidden="true">&#127754;</div>
-            <p class="step-time">Day 4</p>
-            <p class="step-title">Return</p>
-            <p class="step-desc">Deorbit burn, atmospheric re-entry, and water splashdown. Medical team on-site.</p>
+
+          <!-- 4 — Return: image left, text right -->
+          <li class="trip-step trip-step--flip reveal">
+            <div class="trip-step-image" aria-hidden="true">
+              <div class="trip-step-visual trip-visual--return">
+                <span class="trip-visual-icon">&#127754;</span>
+                <div class="trip-visual-label">Day 4 · Atlantic splashdown</div>
+              </div>
+            </div>
+            <div class="trip-step-content">
+              <p class="step-time">Day 4</p>
+              <h3 class="step-title">Return</h3>
+              <p class="step-desc">The deorbit burn slows Aurora and begins the long fall home. Re-entry plasma lights the windows orange for six minutes. Parachutes deploy. The ocean rises to meet you. Our recovery vessel is already on-station, and a full medical team is waiting aboard to welcome you back to Earth.</p>
+            </div>
           </li>
+
         </ol>
-
-        <div class="shuttle-card reveal">
-          <div class="shuttle-visual" aria-hidden="true">&#128640;</div>
-
-          <div class="shuttle-info">
-            <h3>Firefly Capsule &#8212; &#8220;Aurora&#8221;</h3>
-            <p>
-              Aurora is a fully autonomous pressurised capsule built for civilian orbital flight.
-              She carries 6 passengers plus 1 Firefly flight director, with a pressurised volume of
-              11&nbsp;m&#179;, redundant life support, and a full-panoramic cupola dome.
-            </p>
-            <p class="shuttle-specs">
-              &#128274; All systems triple-redundant &nbsp;&#183;&nbsp;
-              &#127749; 21% O&#8322; atmosphere &nbsp;&#183;&nbsp;
-              &#10052;&#65039; 20&#176;C cabin temp
-            </p>
-          </div>
-
-          <div>
-            <ul class="seats-grid" aria-label="6 passenger seats">
-              <li class="seat" aria-label="Seat 1">&#128100;</li>
-              <li class="seat" aria-label="Seat 2">&#128100;</li>
-              <li class="seat" aria-label="Seat 3">&#128100;</li>
-              <li class="seat" aria-label="Seat 4">&#128100;</li>
-              <li class="seat" aria-label="Seat 5">&#128100;</li>
-              <li class="seat" aria-label="Seat 6">&#128100;</li>
-            </ul>
-            <p class="seats-label">6 passenger seats available per mission</p>
-          </div>
-        </div>
 
       </div>
     </section>
@@ -294,16 +301,100 @@
 
         </ul>
 
-        <div class="process-strip reveal">
-          <strong>Evaluation timeline</strong>
-          <ol class="process-steps">
-            <li class="p-step" data-n="1">Application submitted</li>
-            <li class="p-step" data-n="2">Medical records review (4 weeks)</li>
-            <li class="p-step" data-n="3">On-site health screening (2 days)</li>
-            <li class="p-step" data-n="4">Fitness &amp; drills assessment (1 day)</li>
-            <li class="p-step" data-n="5">Psychological debrief (1 day)</li>
-            <li class="p-step" data-n="6">Final clearance &amp; seat assignment</li>
-          </ol>
+        <div class="eval-carousel reveal" aria-label="Evaluation timeline">
+          <p class="section-label">Evaluation timeline</p>
+
+          <div class="eval-carousel-inner">
+
+            <!-- Progress bar -->
+            <div class="eval-progress-track" aria-hidden="true">
+              <div class="eval-progress-fill"></div>
+            </div>
+
+            <!-- Prev / Next arrows -->
+            <div class="eval-arrows" aria-label="Carousel controls">
+              <button class="eval-arrow eval-arrow--prev" aria-label="Previous step">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <polyline points="13,4 7,10 13,16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="eval-arrow eval-arrow--next" aria-label="Next step">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <polyline points="7,4 13,10 7,16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Slides -->
+            <div class="eval-slides" aria-live="polite">
+
+              <div class="eval-slide is-active" id="eval-slide-0">
+                <div class="eval-slide-meta">
+                  <span class="eval-slide-num" aria-hidden="true">01</span>
+                  <span class="eval-slide-duration">Step 1</span>
+                </div>
+                <strong class="eval-slide-title">Application Submitted</strong>
+                <p class="eval-slide-desc">Submit your online application with personal details, health background, and a brief motivation statement. Our admissions team acknowledges receipt within 48 hours.</p>
+              </div>
+
+              <div class="eval-slide" id="eval-slide-1">
+                <div class="eval-slide-meta">
+                  <span class="eval-slide-num" aria-hidden="true">02</span>
+                  <span class="eval-slide-duration">4 weeks</span>
+                </div>
+                <strong class="eval-slide-title">Medical Records Review</strong>
+                <p class="eval-slide-desc">Our flight surgeons review your submitted medical history, GP records, and any specialist reports. You may be asked for additional documentation during this stage.</p>
+              </div>
+
+              <div class="eval-slide" id="eval-slide-2">
+                <div class="eval-slide-meta">
+                  <span class="eval-slide-num" aria-hidden="true">03</span>
+                  <span class="eval-slide-duration">2 days</span>
+                </div>
+                <strong class="eval-slide-title">On-site Health Screening</strong>
+                <p class="eval-slide-desc">Travel to our Cape Canaveral facility for in-person cardiovascular, neurological, and pulmonary assessments conducted by our medical team and flight surgeons.</p>
+              </div>
+
+              <div class="eval-slide" id="eval-slide-3">
+                <div class="eval-slide-meta">
+                  <span class="eval-slide-num" aria-hidden="true">04</span>
+                  <span class="eval-slide-duration">1 day</span>
+                </div>
+                <strong class="eval-slide-title">Fitness &amp; Drills Assessment</strong>
+                <p class="eval-slide-desc">Complete a structured physical evaluation including endurance, strength, and flexibility benchmarks, followed by a suited emergency egress drill in our training facility.</p>
+              </div>
+
+              <div class="eval-slide" id="eval-slide-4">
+                <div class="eval-slide-meta">
+                  <span class="eval-slide-num" aria-hidden="true">05</span>
+                  <span class="eval-slide-duration">1 day</span>
+                </div>
+                <strong class="eval-slide-title">Psychological Debrief</strong>
+                <p class="eval-slide-desc">A confidential session with a licensed flight psychologist assessing your readiness for confined environments, isolation tolerance, and the emotional intensity of orbital flight.</p>
+              </div>
+
+              <div class="eval-slide" id="eval-slide-5">
+                <div class="eval-slide-meta">
+                  <span class="eval-slide-num" aria-hidden="true">06</span>
+                  <span class="eval-slide-duration">Clearance</span>
+                </div>
+                <strong class="eval-slide-title">Final Clearance &amp; Seat Assignment</strong>
+                <p class="eval-slide-desc">You're cleared to fly. Our mission coordinators contact you with your confirmed seat, launch window, and the full pre-flight training schedule for the weeks ahead.</p>
+              </div>
+
+            </div>
+
+            <!-- Dot navigation -->
+            <nav class="eval-dots" aria-label="Evaluation steps">
+              <button class="eval-dot is-active" aria-label="Step 1: Application submitted" data-index="0">01</button>
+              <button class="eval-dot" aria-label="Step 2: Medical records review" data-index="1">02</button>
+              <button class="eval-dot" aria-label="Step 3: On-site health screening" data-index="2">03</button>
+              <button class="eval-dot" aria-label="Step 4: Fitness and drills assessment" data-index="3">04</button>
+              <button class="eval-dot" aria-label="Step 5: Psychological debrief" data-index="4">05</button>
+              <button class="eval-dot" aria-label="Step 6: Final clearance and seat assignment" data-index="5">06</button>
+            </nav>
+
+          </div>
         </div>
 
       </div>
@@ -443,19 +534,19 @@
           <div class="form-grid">
             <div class="form-field">
               <label for="first-name">First Name</label>
-              <input type="text" id="first-name" name="first_name" placeholder="Elena" autocomplete="given-name" required>
+              <input type="text" id="first-name" name="first_name" autocomplete="given-name" required>
             </div>
             <div class="form-field">
               <label for="last-name">Last Name</label>
-              <input type="text" id="last-name" name="last_name" placeholder="Vasquez" autocomplete="family-name" required>
+              <input type="text" id="last-name" name="last_name" autocomplete="family-name" required>
             </div>
             <div class="form-field">
               <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="elena@example.com" autocomplete="email" required>
+              <input type="email" id="email" name="email" autocomplete="email" required>
             </div>
             <div class="form-field">
               <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="+1 555 000 0000" autocomplete="tel">
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
             </div>
             <div class="form-field">
               <label for="dob">Date of Birth</label>
@@ -463,11 +554,11 @@
             </div>
             <div class="form-field">
               <label for="nationality">Nationality</label>
-              <input type="text" id="nationality" name="nationality" placeholder="e.g. Spanish">
+              <input type="text" id="nationality" name="nationality">
             </div>
             <div class="form-field">
               <label for="occupation">Occupation</label>
-              <input type="text" id="occupation" name="occupation" placeholder="e.g. Software Engineer">
+              <input type="text" id="occupation" name="occupation">
             </div>
             <div class="form-field">
               <label for="mission-year">Preferred Mission Year</label>
@@ -487,11 +578,11 @@
           <div class="form-grid">
             <div class="form-field">
               <label for="height">Height (cm)</label>
-              <input type="number" id="height" name="height" placeholder="170" min="140" max="210">
+              <input type="number" id="height" name="height" min="140" max="210">
             </div>
             <div class="form-field">
               <label for="weight">Weight (kg)</label>
-              <input type="number" id="weight" name="weight" placeholder="70" min="40" max="150">
+              <input type="number" id="weight" name="weight" min="40" max="150">
             </div>
             <div class="form-field">
               <label for="blood-type">Blood Type</label>
@@ -516,15 +607,17 @@
             </div>
             <div class="form-field full">
               <label for="conditions">Pre-existing Medical Conditions</label>
-              <textarea id="conditions" name="conditions" placeholder="List any diagnosed conditions, past surgeries, or ongoing treatments. If none, write &#8216;None&#8217;."></textarea>
+              <textarea id="conditions" name="conditions"></textarea>
+              <small class="field-hint">List any diagnosed conditions, past surgeries, or ongoing treatments. If none, write &#8216;None&#8217;.</small>
             </div>
             <div class="form-field full">
               <label for="medications">Current Medications</label>
-              <textarea id="medications" name="medications" style="min-height:80px" placeholder="List name, dosage, and frequency of any regular medications. If none, write &#8216;None&#8217;."></textarea>
+              <textarea id="medications" name="medications" style="min-height:80px"></textarea>
+              <small class="field-hint">List name, dosage, and frequency of any regular medications. If none, write &#8216;None&#8217;.</small>
             </div>
             <div class="form-field full">
               <label for="allergies">Known Allergies</label>
-              <input type="text" id="allergies" name="allergies" placeholder="e.g. Penicillin, latex, shellfish &#8212; or &#8216;None&#8217;">
+              <input type="text" id="allergies" name="allergies">
             </div>
           </div>
 
@@ -563,7 +656,7 @@
             </div>
             <div class="form-field full">
               <label for="motivation">Why do you want to fly with Firefly? <span aria-label="optional">(optional)</span></label>
-              <textarea id="motivation" name="motivation" placeholder="Tell us in a few sentences what draws you to orbital flight&#8230;"></textarea>
+              <textarea id="motivation" name="motivation"></textarea>
             </div>
           </div>
 
@@ -601,12 +694,12 @@
             </label>
           </div>
 
+          <div class="submit-banner" role="note">
+            <p>We review every application personally. You will hear from us within 10 business days.</p>
+          </div>
+
           <div class="submit-row">
             <button type="submit" class="btn-submit">Submit Application</button>
-            <p class="submit-note">
-              We review every application personally.<br>
-              You will hear from us within 10 business days.
-            </p>
           </div>
 
         </form>

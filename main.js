@@ -48,6 +48,96 @@ const revealObserver = new IntersectionObserver(
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+// ── Select dropdowns: swap chevron based on open/closed state ──
+// Native <select> has no open/close events, so we approximate:
+// open on mousedown, close on blur (click outside / tab away) or change (option picked).
+document.querySelectorAll('select').forEach(select => {
+  select.addEventListener('mousedown', function () { this.setAttribute('data-open', ''); });
+  select.addEventListener('blur',      function () { this.removeAttribute('data-open'); });
+  select.addEventListener('change',    function () { this.removeAttribute('data-open'); });
+});
+
+// ── Evaluation carousel ──
+(function () {
+  const carousel = document.querySelector('.eval-carousel-inner');
+  if (!carousel) return;
+
+  const slides   = Array.from(carousel.querySelectorAll('.eval-slide'));
+  const dots     = Array.from(carousel.querySelectorAll('.eval-dot'));
+  const fill     = carousel.querySelector('.eval-progress-fill');
+  const DURATION = 8000; // ms per slide
+
+  let current   = 0;
+  let raf       = null;
+  let paused    = false;
+  let elapsed   = 0;
+  let startTime = null;
+
+  function goTo(index) {
+    slides[current].classList.remove('is-active');
+    dots[current].classList.remove('is-active');
+    dots[current].removeAttribute('aria-current');
+
+    current = index;
+
+    slides[current].classList.add('is-active');
+    dots[current].classList.add('is-active');
+    dots[current].setAttribute('aria-current', 'true');
+
+    // Reset progress
+    elapsed = 0;
+    fill.style.width = '0%';
+    if (!paused) startTimer();
+  }
+
+  function startTimer() {
+    cancelAnimationFrame(raf);
+    startTime = performance.now() - elapsed;
+    raf = requestAnimationFrame(tick);
+  }
+
+  function tick(now) {
+    elapsed = now - startTime;
+    const progress = Math.min(elapsed / DURATION, 1);
+    fill.style.width = `${progress * 100}%`;
+
+    if (progress >= 1) {
+      goTo((current + 1) % slides.length);
+    } else {
+      raf = requestAnimationFrame(tick);
+    }
+  }
+
+  // Pause on hover
+  carousel.addEventListener('mouseenter', () => {
+    paused = true;
+    cancelAnimationFrame(raf);
+  });
+
+  carousel.addEventListener('mouseleave', () => {
+    paused = false;
+    startTime = performance.now() - elapsed;
+    raf = requestAnimationFrame(tick);
+  });
+
+  // Dot clicks
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => goTo(i));
+  });
+
+  // Arrow clicks
+  carousel.querySelector('.eval-arrow--prev')?.addEventListener('click', () => {
+    goTo((current - 1 + slides.length) % slides.length);
+  });
+  carousel.querySelector('.eval-arrow--next')?.addEventListener('click', () => {
+    goTo((current + 1) % slides.length);
+  });
+
+  // Respect reduced-motion: skip auto-advance
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReduced) startTimer();
+}());
+
 // ── Application form: client-side submit feedback ──
 const form        = document.querySelector('.apply-form');
 const formSuccess = document.querySelector('.form-success');
