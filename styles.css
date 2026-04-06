@@ -87,6 +87,22 @@
     html { scroll-behavior: auto; }
     .reveal { opacity: 1 !important; translate: none !important; }
   }
+
+  /* ── Focus indicators (WCAG 2.4.7, 2.4.11) ── */
+  :focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: -4px;
+  }
+}
 }
 
 /* ── Layout ──────────────────────────────────────────────── */
@@ -128,7 +144,9 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.75rem 2.5rem;
+    padding: 0.85rem 2.5rem;
+    min-height: 44px;
+    min-width: 44px;
     font-family: var(--font-head);
     font-size: 0.8rem;
     font-weight: 600;
@@ -166,7 +184,8 @@
     background: var(--white);
     color: var(--bg);
     border-color: var(--white);
-    padding: 0.85rem 3rem;
+    padding: 0.9rem 2.5rem;
+    min-height: 44px;
 
     &:hover {
       background: oklch(78% 0 0);
@@ -873,28 +892,31 @@
 
   label {
     font-family: var(--font-head);
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    color: var(--muted);
+    color: var(--text);
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    display: block;
+    margin-block-end: 0.6rem;
   }
 
   :is(input, select, textarea) {
     width: 100%;
-    background: transparent;
-    border: none;
-    border-block-end: 1px solid var(--line);
+    background: color-mix(in oklch, white 5%, transparent);
+    border: 1px solid var(--line);
     border-radius: 0;
     color: var(--text);
     font-size: 0.95rem;
-    padding: 0.65rem 0;
-    transition: border-color 0.2s;
+    padding: 0.85rem 0.9rem;
+    min-height: 44px;
+    transition: border-color 0.2s, background 0.2s;
     appearance: none;
 
     &:focus {
       outline: none;
-      border-block-end-color: var(--text);
+      border-color: var(--text);
+      background: color-mix(in oklch, white 8%, transparent);
     }
 
     &::placeholder {
@@ -902,15 +924,10 @@
     }
   }
 
-  select option { background: oklch(10% 0 0); }
-
+  select option { background: var(--dark); }
   textarea {
     resize: vertical;
     min-height: 100px;
-    border: 1px solid var(--line);
-    padding: 0.75rem;
-
-    &:focus { border-color: var(--line-hv); }
   }
 
   .checkbox-row {
@@ -1014,6 +1031,31 @@
 
 /* ── Utilities ───────────────────────────────────────────── */
 @layer utilities {
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 9999;
+  }
+
+  .skip-link:focus {
+    position: fixed;
+    left: 50%;
+    top: 1rem;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    overflow: visible;
+    padding: 0.75rem 1.5rem;
+    background: var(--white);
+    color: var(--bg);
+    border-radius: 0;
+    font-weight: 600;
+  }
+
   .visually-hidden {
     position: absolute;
     width: 1px; height: 1px;
